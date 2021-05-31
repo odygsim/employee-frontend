@@ -1,0 +1,39 @@
+<div class="container">
+   <h1>employee Scheduler</h1>
+   <div class="col-lg-8 ">
+     <h3 *ngIf="success" class="text-success">Succesfully created!</h3>
+      <h4><small>All fields are required</small></h4>
+      <div class="row well center">
+         <form (ngSubmit)="onSubmit()">
+            <div class="col-sm-12">
+               <div class="row">
+                  <div class="col-sm-6 form-group">
+                     <label>First Name</label>
+                     <input type="text" class="form-control"
+                            id="firstName" name="firstName"
+                            [(ngModel)]="employee.FirstName">
+                  </div>
+                  <div class="col-sm-6 form-group">
+                     <label>Last Name</label>
+                     <input type="text" class="form-control"
+                            name="lastName" [(ngModel)]="employee.LastName">
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-sm-6 form-group">
+                     <label>Department</label>
+                     <input type="text" class="form-control"
+                            name="department" [(ngModel)]="employee.Department">
+                  </div>
+                  <div class="col-sm-6 form-group">
+                     <label>Salary</label>
+                     <input type="text" class="form-control"
+                            name="salary" [(ngModel)]="employee.Salary">
+                  </div>
+               </div>
+               <button type="submit" class="btn btn-lg btn-info">Submit</button>
+            </div>
+         </form>
+      </div>
+   </div>
+</div>
